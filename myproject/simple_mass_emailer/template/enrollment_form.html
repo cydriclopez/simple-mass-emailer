@@ -1,0 +1,225 @@
+{% load static from staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+<title>Affiliate Signup Form</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<style>
+body {
+    padding-top: 50px;
+}
+.starter-template {
+    padding: 40px 15px;
+    text-align: center;
+}
+#logo {
+    width: 246px;
+    height: 77px;
+    top: 0;
+    left: 0;
+    margin: 20px 0;
+    border-radius: 10px;
+    border: 3px solid gray;
+}
+h3 {
+    position: relative;
+    top: -20px;
+}
+</style>
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+</head>
+  <body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#" style="color:red">Logo Inc.</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#" onclick="enrollFormSubmit()">Submit</a></li>
+            <li class="active"><a href="#" onclick="enrollFormCancel();return false;">Cancel</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+      <img src="{% static 'img/logo.png' %}" alt="logo" id="logo">
+      <h3>Affiliate Signup Form</h3>
+      <form class="form-horizontal" role="form" id="enroll-form" method="post" action="">{% csrf_token %}
+
+        <div class="form-group">
+          <label class="control-label col-sm-2" for="sponsor">Your Sponsor</label>
+          <div class="col-sm-10">
+            <p class="form-control-static">{{ form.initial.sponsor }}</p>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="control-label col-sm-2" for="email">Your Email</label>
+          <div class="col-sm-10">
+            <p class="form-control-static">{{ form.initial.email }}</p>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="control-label col-sm-2" for="first_name">Firstname*</label>
+          <div class="col-sm-10 col-sm-5">
+            <input type="text" class="form-control" required placeholder="Enter your firstname (*Required)"
+            id="first_name" name="first_name" value="{{ form.initial.first_name}}">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="control-label col-sm-2" for="last_name">Lastname*</label>
+          <div class="col-sm-10 col-sm-5">
+            <input type="text" class="form-control" required placeholder="Enter your lastname (*Required)"
+            id="last_name" name="last_name" value="{{ form.initial.last_name}}">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="control-label col-sm-2" for="company">Company</label>
+          <div class="col-sm-10 col-sm-5">
+            <input type="text" class="form-control" placeholder="Enter your company name"
+            id="company" name="company" value="{{ form.initial.company}}">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="control-label col-sm-2" for="address1">Address*</label>
+          <div class="col-sm-10 col-sm-5">
+            <input type="text" class="form-control" required placeholder="Enter your address (*Required)"
+            id="address1" name="address1" value="{{ form.initial.address1 }}">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="control-label col-sm-2" for="address2">Address 2</label>
+          <div class="col-sm-10 col-sm-5">
+            <input type="text" class="form-control" placeholder="Enter your address"
+            id="address2" name="address2" value="{{ form.initial.address2 }}">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="control-label col-sm-2" for="city">City*</label>
+          <div class="col-sm-10 col-sm-5">
+            <input type="text" class="form-control" required placeholder="Enter your city (*Required)"
+            id="city" name="city" value="{{ form.initial.city }}">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="control-label col-sm-2" for="state">State*</label>
+          <div class="col-sm-10 col-sm-5">
+              <select class="form-control" id="state" name="state" required>
+              {% for state_initial, state_string in state_choices %}
+                <option value="{{ state_initial }}" {% ifequal state_initial form.initial.state %}selected{% endifequal %}>{{ state_string }}</option>
+              {% endfor %}
+              </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="control-label col-sm-2" for="zipcode">ZIP Code*</label>
+          <div class="col-sm-10 col-sm-5">
+            <input type="text" class="form-control" required placeholder="Enter your zip code (*Required)"
+            id="zipcode" name="zipcode" value="{{ form.initial.zipcode }}">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="control-label col-sm-2" for="phone">Phone*</label>
+          <div class="col-sm-10 col-sm-5">
+            <input type="text" class="form-control" required placeholder="Enter your phone (*Required)"
+            id="phone" name="phone" value="{{ form.initial.phone }}">
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-sm-offset-2 col-sm-10">
+            <div class="checkbox">
+              <label><input type="checkbox" name="realtor" id="realtor"{% if form.initial.realtor %} checked{% endif %}> Realtor</label>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-sm-offset-2 col-sm-10">
+            <div class="checkbox">
+              <label><input type="checkbox" name="ins_agent" id="ins_agent"{% if form.initial.ins_agent %} checked{% endif %}> Insurance Agent</label>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-offset-2 col-sm-10">
+          <p><strong>Your Username will be generated, using your firstname and lastname, then emailed to you.</strong></p>
+        </div>
+        <div class="form-group">
+          <label class="control-label col-sm-2" for="agreement">Agreement</label>
+          <div class="col-sm-10 col-sm-5">
+            <textarea class="form-control" id="agreement" rows="8" wrap="VIRTUAL" readonly="readonly">AFFILIATE MARKETING AGREEMENT
+
+This Affiliate Marketing Agreement is between Company Inc., a California company&nbsp;(“We” or “Company Inc.”), and you, an Affiliate&nbsp;(“You” or “Affiliate”)&nbsp;in the affiliate marketing network Companyfinancial.com&nbsp;(the “Affiliate Marketing Network”), and consists of the terms and descriptions contained herein and the following agreements&nbsp;located in the ‘Legal Docs’ folder in your Back Office:
+
+1) Company Financial Compensation Plan;
+
+2)&nbsp;Company Financial Code of Ethics;
+
+3) Company Financial Policies &amp; Procedures;
+
+4) Company Financial Website Terms of Use;
+
+5) Company Financial Email Marketing Policy; and
+
+6) Company Financial Anti-Spam (collectively referred to herein as this&nbsp;“Agreement”).
+
+When you submit this application, you confirm that you’ve read and completely understand all&nbsp;terms and conditions listed in this agreement and agree to be bound by said terms and conditions.&nbsp;As used herein, “We” and “our” shall mean Company Financial&nbsp;and/or any agency or network act&nbsp;in its behalf, and “you” or “your”&nbsp;shall mean any entity identified at the time of registration or enrollment, and/or any agency or network acting on its (or their) behalf, which entities, agencies and/or network shall hereby also be bound by the terms of this Agreement.
+
+YOUR REGISTERING FOR PARTICIPATION IN THE AFFILIATE MARKETING NETWORK OR YOUR CONTINUED PARTICIPATION IN THE AFFILIATE MARKETING NETWORK FOLLOWING OUR POSTING OF A CHANGE NOTICE, OR REVISED TERMS OR CONDITIONS FOR THE AFFILIATE MARKETING NETWORK ON THE CompanyFINANCIAL.COM WEBSITE INDICATES THAT YOU (A) ACCEPT AND AGREE TO BE BOUND BY THIS AGREEMENT AND (B) ACKNOWLEDGE AND AGREE THAT YOU HAVE INDEPENDENTLY EVALUATED THE DESIRABILITY OF PARTICIPATING IN THE AFFILIATE MARKETING NETWORK AND ARE NOT RELYING ON ANY REPRESENTATION, GUARANTEE, OR STATEMENT OTHER THAN AS EXPRESSLY SET FORTH IN THIS AGREEMENT AND (C) HEREBY REPRESENT AND WARRANT THAT YOU ARE LAWFULLY ABLE TO ENTER INTO CONTRACTS AND THAT YOU ARE AND WILL REMAIN IN COMPLIANCE WITH THIS AGREEMENT. IN ADDITION, IF THIS AGREEMENT IS BEING AGREED TO BY A COMPANY OR OTHER LEGAL ENTITY, THEN THE PERSON AGREEING TO THIS AGREEMENT ON BEHALF OF THAT COMPANY OR ENTITY HEREBY REPRESENTS AND WARRANTS THAT HE OR SHE IS AUTHORIZED AND LAWFULLY ABLE TO BIND THAT COMPANY OR ENTITY TO THIS AGREEMENT
+
+IF YOU ARE AN INDIVIDUAL, YOU REPRESENT AND WARRANT THAT YOU WERE AT LEAST 18 YEARS OF AGE ON THE EFFECTIVE DATE OF THIS AGREEMENT.&nbsp;
+
+</textarea>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-sm-offset-2 col-sm-10">
+            <div class="checkbox">
+              <label><input type="checkbox" name="signupAgree" id="signupAgree" required> I agree to the terms and conditions in the agreement above.*</label>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-sm-offset-2 col-sm-10">
+            <button type="submit" class="btn btn-sm btn-success" onclick="enrollFormSubmit()">&nbsp;&nbsp;&nbsp;&nbsp;Submit&nbsp;&nbsp;&nbsp;&nbsp;</button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button type="button" class="btn btn-sm btn-default" onclick="enrollFormCancel()">&nbsp;&nbsp;&nbsp;&nbsp;Cancel&nbsp;&nbsp;&nbsp;&nbsp;</button>
+          </div>
+        </div><br><br>
+      </form>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script>
+function enrollFormSubmit() {
+    if (document.getElementById("signupAgree").checked == true) {
+        return (confirm("Please confirm to submit data.") == true)
+    }
+    else {
+        alert("Please click the checkbox to agree.");
+        return false;
+    }
+}
+
+function enrollFormCancel() {
+    if (confirm("Please confirm to cancel.") == true) {
+        window.open("{% url 'enroll-cancel' md5hash %}","_self");
+    }
+}
+</script>
+  </body>
+</html>

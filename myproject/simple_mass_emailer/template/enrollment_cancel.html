@@ -1,0 +1,58 @@
+{% load static from staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Affifiate Enrollment Form</title>
+<link rel="stylesheet" href="{% static 'css/home.css' %}" />
+</head>
+<body bgcolor="#f6f6f6">
+<!-- body -->
+<table class="body-wrap">
+<tr>
+<td></td>
+<td class="container" bgcolor="#FFFFFF">
+<!-- content -->
+<div class="content">
+<table>
+<tr>
+<td>
+<img src="{% static 'img/logo.png' %}" alt="logo" id="logo">
+<h1>See you later!</h1>
+<p>We hope you will <strong>reconsider</strong> and sign up soon.</p>
+<p>From your sponsor:<br><strong>{{ sponsor }}</strong></p>
+</td>
+</tr>
+</table>
+</div>
+<!-- /content -->
+</td>
+<td></td>
+</tr>
+</table>
+<!-- /body -->
+<!-- footer -->
+<table class="footer-wrap">
+<tr>
+<td></td>
+<td class="container">
+<!-- content -->
+<div class="content">
+<table>
+<tr>
+<td align="center">
+<!-- p>Don't like these annoying emails? <a href="#"><unsubscribe>Unsubscribe</unsubscribe></a>.
+</p -->
+</td>
+</tr>
+</table>
+</div>
+<!-- /content -->
+</td>
+<td></td>
+</tr>
+</table>
+<!-- /footer -->
+</body>
+</html>
