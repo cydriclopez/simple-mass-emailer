@@ -101,8 +101,8 @@ TEMPLATE_DIRS = (
     '/home/user1/Projects/simple-mass-emailer/simple-mass-emailer/myproject/simple_mass_emailer/template',
 )
 
-# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+# EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 # EMAIL_BACKEND = 'django.core.mail.backends.dummy.EmailBackend'
 EMAIL_PORT = 25
 EMAIL_HOST = local_settings.EMAIL_HOST
