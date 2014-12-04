@@ -11,7 +11,9 @@ The class `simple_mass_emailer.admin.MassEmailer() <https://github.com/cydriclop
 is demo for a quick easy way to create a custom action in Django's admin interface.
 
 The Django Class-Based-View (CBV) `simple_mass_emailer.views.EnrollFormView() <https://github.com/cydriclopez/simple-mass-emailer/blob/master/myproject/simple_mass_emailer/views.py>`_
-is a demo for a quick easy data entry form for a simple application.
+is a demo for a quick easy mobile-friendly (using `Bootstrap <http://getbootstrap.com/>`_) data entry form
+(`enrollment_form.html <https://github.com/cydriclopez/simple-mass-emailer/blob/master/myproject/simple_mass_emailer/template/enrollment_form.html>`_)
+for a simple application.
 
 Admin-based interface
 ---------------------
