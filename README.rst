@@ -32,14 +32,14 @@ Choose a template and "Send email using chosen template" from pull-down menu.
 .. image:: /myproject/simple_mass_emailer/static/img/demo_choose_send_email_using_template.png
 
 
-Create a recruit/target email initial entry.
+Create a recruit/target email initial entry. A link to a form is used to fillout more info.
 
 .. image:: /myproject/simple_mass_emailer/static/img/demo_add_recruit_email.png
 
 
-**Includes a sample "Affiliate Signup Form"**
+**Includes a sample form "Affiliate Signup Form"**
 
-This is a samle email sent to target email.
+This is a sample email sent to target email. Clicking on the link opens a form.
 
 .. image:: /myproject/simple_mass_emailer/static/img/demo_affiliate_email.png
 
