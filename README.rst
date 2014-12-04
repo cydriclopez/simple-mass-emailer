@@ -67,7 +67,7 @@ Testing
 Note that the classmethod `simple_mass_emailer.tests.Test_main.setUpClass() <https://github.com/cydriclopez/simple-mass-emailer/blob/master/myproject/simple_mass_emailer/tests.py>`_
 loads the file `create_message.sql <https://github.com/cydriclopez/simple-mass-emailer/blob/master/myproject/simple_mass_emailer/sql/create_message.sql>`_.
 
-For testing to work make sure the login/password account
-into PostgreSQL has the role right to create a database:
+For testing (`tests.py <https://github.com/cydriclopez/simple-mass-emailer/blob/master/myproject/simple_mass_emailer/tests.py>`_)
+to work make sure the login/password account into PostgreSQL has the role right to create a database:
 ::
     postgres=# ALTER USER username CREATEDB;
