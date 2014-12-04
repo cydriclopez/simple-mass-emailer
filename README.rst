@@ -13,10 +13,8 @@ is demo for a quick easy way to create a custom action in Django's admin interfa
 The Django Class-Based-View (CBV) `simple_mass_emailer.views.EnrollFormView() <https://github.com/cydriclopez/simple-mass-emailer/blob/master/myproject/simple_mass_emailer/views.py>`_
 is a demo for a quick easy data entry form for a simple application.
 
-Features
---------
-
-**Admin-based interface**
+Admin-based interface
+---------------------
 
 Create a recruit/target email initial entry. A link to a form is used to fillout more info.
 
@@ -43,7 +41,8 @@ Choose a template and "Send email using chosen template" from pull-down menu.
 .. image:: /myproject/simple_mass_emailer/static/img/demo_choose_send_email_using_template.png
 
 
-**Includes a sample form "Affiliate Signup Form"**
+Includes a sample form "Affiliate Signup Form"
+----------------------------------------------
 
 This is a sample email sent to target email. Clicking on the link opens a form.
 
