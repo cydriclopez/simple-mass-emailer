@@ -10,34 +10,39 @@ include the use of Celery + RabbitMQ.
 Features
 --------
 
-** Admin-based interface **
+**Admin-based interface**
 
 Click "Email templates" to create email templates.
 
 .. image:: /myproject/simple_mass_emailer/static/img/demo_click_email_templates.png
 
+
 Create/Edit an email template.
 
 .. image:: /myproject/simple_mass_emailer/static/img/demo_create_edit_email_template.png
+
 
 List of Email templates.
 
 .. image:: /myproject/simple_mass_emailer/static/img/demo_list_email_template.png
 
+
 Choose a template and "Send email using chosen template" from pull-down menu.
 
 .. image:: /myproject/simple_mass_emailer/static/img/demo_choose_send_email_using_template.png
+
 
 Create a recruit/target email initial entry.
 
 .. image:: /myproject/simple_mass_emailer/static/img/demo_add_recruit_email.png
 
 
-** Includes a sample "Affiliate Signup Form" **
+**Includes a sample "Affiliate Signup Form"**
 
 This is a samle email sent to target email.
 
 .. image:: /myproject/simple_mass_emailer/static/img/demo_affiliate_email.png
+
 
 Mobile-friendly form (using Bootstrap) that fill out the rest of recruit/target information.
 
