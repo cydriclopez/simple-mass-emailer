@@ -39,7 +39,7 @@ This is a samle email sent to target email.
 
 .. image:: /myproject/simple_mass_emailer/static/img/demo_affiliate_email.png
 
-This is the form that fill out the rest of recruit/target information.
+Mobile-friendly form (using Bootstrap) that fill out the rest of recruit/target information.
 
 .. image:: /myproject/simple_mass_emailer/static/img/demo_affiliate_signup_form.png
 
