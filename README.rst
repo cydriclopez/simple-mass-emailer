@@ -10,7 +10,7 @@ include the use of Celery + RabbitMQ.
 The class `simple_mass_emailer.admin.MassEmailer() <https://github.com/cydriclopez/simple-mass-emailer/blob/master/myproject/simple_mass_emailer/admin.py>`_
 is demo for a quick easy way to create a custom action in Django's admin interface.
 
-The Django Class-Based-View (CBV) `simple_mass_emailer.view.EnrollFormView() <https://github.com/cydriclopez/simple-mass-emailer/blob/master/myproject/simple_mass_emailer/views.py>`_
+The Django Class-Based-View (CBV) `simple_mass_emailer.views.EnrollFormView() <https://github.com/cydriclopez/simple-mass-emailer/blob/master/myproject/simple_mass_emailer/views.py>`_
 is a demo for a quick easy data entry form for a simple application.
 
 Features
