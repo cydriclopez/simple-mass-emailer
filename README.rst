@@ -59,7 +59,7 @@ PostgreSQL
 This project uses the PostgreSQL database. The plpgsql stored function
 `create_message.sql <https://github.com/cydriclopez/simple-mass-emailer/blob/master/myproject/simple_mass_emailer/sql/create_message.sql>`_
 creates the email message and stuff them into table EmailMessage.
-This table is a is non-normalized table that serves as record log for email messages sent.
+This table is a non-normalized table that serves as record log for email messages sent.
 
 Testing
 -------
