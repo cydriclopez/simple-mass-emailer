@@ -18,11 +18,6 @@ for a simple application.
 Admin-based interface
 ---------------------
 
-**Create a recruit/target email initial entry. A link to a form is used to fillout more info.**
-
-.. image:: /myproject/simple_mass_emailer/static/img/demo_add_recruit_email.png
-
-
 **Click "Email templates" to create email templates.**
 
 .. image:: /myproject/simple_mass_emailer/static/img/demo_click_email_templates.png
@@ -41,6 +36,11 @@ Admin-based interface
 **Choose a template and "Send email using chosen template" from pull-down menu.**
 
 .. image:: /myproject/simple_mass_emailer/static/img/demo_choose_send_email_using_template.png
+
+
+**Create a recruit/target email initial entry. A link to a form is used to fillout more info.**
+
+.. image:: /myproject/simple_mass_emailer/static/img/demo_add_recruit_email.png
 
 
 Includes a sample form "Affiliate Signup Form"
