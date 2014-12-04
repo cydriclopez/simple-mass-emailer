@@ -59,13 +59,13 @@ PostgreSQL
 ----------
 This project uses the PostgreSQL database. The plpgsql stored function
 `create_message.sql <https://github.com/cydriclopez/simple-mass-emailer/blob/master/myproject/simple_mass_emailer/sql/create_message.sql>`_
-creates the email message and stuff them into table EmailMessage.
-This table is a non-normalized table that serves as record log for email messages sent.
+creates the email message using the template chosen in EmailTemplate and stuff them into table EmailMessage.
+This EmailMessage table is a non-normalized table that serves as record log for email messages sent.
 
 Testing
 -------
-Note that the classmethod `simple_mass_emailer.tests.Test_main.setUpClass() <https://github.com/cydriclopez/simple-mass-emailer/blob/master/myproject/simple_mass_emailer/tests.py>`_ loads
-the file `create_message.sql <https://github.com/cydriclopez/simple-mass-emailer/blob/master/myproject/simple_mass_emailer/sql/create_message.sql>`_.
+Note that the classmethod `simple_mass_emailer.tests.Test_main.setUpClass() <https://github.com/cydriclopez/simple-mass-emailer/blob/master/myproject/simple_mass_emailer/tests.py>`_
+loads the file `create_message.sql <https://github.com/cydriclopez/simple-mass-emailer/blob/master/myproject/simple_mass_emailer/sql/create_message.sql>`_.
 
 For testing to work make sure the login/password account
 into PostgreSQL has the role right to create a database:
