@@ -49,8 +49,7 @@ Includes a sample form "Affiliate Signup Form"
 .. image:: /myproject/simple_mass_emailer/static/img/demo_affiliate_email.png
 
 
-**Mobile-friendly `form <https://github.com/cydriclopez/simple-mass-emailer/blob/master/myproject/simple_mass_emailer/template/enrollment_form.html>`_
-(using Bootstrap) that fill out the rest of recruit/target information.**
+**Mobile-friendly form (using Bootstrap) that fill out the rest of recruit/target information.**
 
 .. image:: /myproject/simple_mass_emailer/static/img/demo_affiliate_signup_form.png
 
