@@ -7,10 +7,10 @@ This version is good for generating hundreds of emails.
 To reliably send thousands of mass email the next version will
 include the use of Celery + RabbitMQ.
 
-The class `simple_mass_emailer.admin.MassEmailer() <https://github.com/cydriclopez/simple-mass-emailer/blob/master/myproject/simple_mass_emailer/admin.py>`_
+The class `simple_mass_emailer.admin.MassEmailer() <https://github.com/cydriclopez/simple-mass-emailer/blob/master/myproject/simple_mass_emailer/admin.py#L21>`_
 is demo for a quick easy way to create a custom action in Django's admin interface.
 
-The Django Class-Based-View (CBV) `simple_mass_emailer.views.EnrollFormView() <https://github.com/cydriclopez/simple-mass-emailer/blob/master/myproject/simple_mass_emailer/views.py>`_
+The Django Class-Based-View (CBV) `simple_mass_emailer.views.EnrollFormView() <https://github.com/cydriclopez/simple-mass-emailer/blob/master/myproject/simple_mass_emailer/views.py#L18>`_
 is a demo for a quick easy mobile-friendly (using `Bootstrap <http://getbootstrap.com/>`_) data entry form
 (`enrollment_form.html <https://github.com/cydriclopez/simple-mass-emailer/blob/master/myproject/simple_mass_emailer/template/enrollment_form.html>`_)
 for a simple application.
@@ -64,7 +64,7 @@ This EmailMessage table is a non-normalized table that serves as record log for 
 
 Testing
 -------
-Note that the classmethod `simple_mass_emailer.tests.Test_main.setUpClass() <https://github.com/cydriclopez/simple-mass-emailer/blob/master/myproject/simple_mass_emailer/tests.py>`_
+Note that the classmethod `simple_mass_emailer.tests.Test_main.setUpClass() <https://github.com/cydriclopez/simple-mass-emailer/blob/master/myproject/simple_mass_emailer/tests.py#L25>`_
 loads the file `create_message.sql <https://github.com/cydriclopez/simple-mass-emailer/blob/master/myproject/simple_mass_emailer/sql/create_message.sql>`_.
 
 For testing (`tests.py <https://github.com/cydriclopez/simple-mass-emailer/blob/master/myproject/simple_mass_emailer/tests.py>`_)
