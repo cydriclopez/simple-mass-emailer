@@ -28,7 +28,7 @@ Admin-based interface
 .. image:: /myproject/simple_mass_emailer/static/img/demo_create_edit_email_template.png
 
 
-**Create a recruit/target email initial entry. A link to a form is used to fill-in more info.**
+**Create a recruit/target email initial entry. In the sent email a link to a form is used to fill-in more info.**
 
 .. image:: /myproject/simple_mass_emailer/static/img/demo_add_recruit_email.png
 
