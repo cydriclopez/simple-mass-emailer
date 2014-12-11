@@ -68,9 +68,8 @@ class MassEmailer(object):
         """
         for template in self.queryset:
             massEmail = EmailMessage.objects.filter(email_template=template)
-            for e in massEmail:
-                message_sent = False
 
+            for e in massEmail:
                 try:
                     send_mail(
                         subject = e.message_subject,
@@ -80,14 +79,12 @@ class MassEmailer(object):
                         fail_silently = False,
                         html_message = e.message_html
                     )
-                    message_sent = True
+
+                    # Keep record of when the email was sent.
+                    MassEmailer.email_sent_timestamp(e.id)
 
                 except:
                     print_info('failed send email')
-
-                # Keep record of when the email was sent.
-                if message_sent:
-                    MassEmailer.email_sent_timestamp(e.id)
 
 ################################################################################
 
