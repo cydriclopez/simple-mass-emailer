@@ -28,7 +28,7 @@ Admin-based interface
 .. image:: /myproject/simple_mass_emailer/static/img/demo_create_edit_email_template.png
 
 
-**Create a recruit/target email initial entry. A link to a form is used to fillout more info.**
+**Create a recruit/target email initial entry. A link to a form is used to fill-in more info.**
 
 .. image:: /myproject/simple_mass_emailer/static/img/demo_add_recruit_email.png
 
@@ -46,12 +46,12 @@ Admin-based interface
 Includes a sample form "Affiliate Signup Form"
 ----------------------------------------------
 
-**This is a sample email sent to target email. Clicking on the link opens a form.**
+**This is a sample email sent to target email. Clicking on the link opens a mobile-friendly form.**
 
 .. image:: /myproject/simple_mass_emailer/static/img/demo_affiliate_email.png
 
 
-**Mobile-friendly form (using Bootstrap) that fill out the rest of recruit/target information.**
+**Mobile-friendly form (using Bootstrap) used to fill-in the rest of recruit/target information.**
 
 .. image:: /myproject/simple_mass_emailer/static/img/demo_affiliate_signup_form.png
 
